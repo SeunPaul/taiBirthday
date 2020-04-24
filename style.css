@@ -10,6 +10,7 @@ body{
 	color: #fff;
 	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
 	background-size: 400% 400%;
+	background-repeat: no-repeat;
 	animation: change 10s ease-in-out infinite;
 }
 
@@ -22,19 +23,20 @@ body{
 }
 #first{
 	border: 3px solid #fff;
-	margin: 120px 80px;
-	padding: 100px 0px 50px 0px;
+	margin: 120px 120px;
+	padding: 100px 50px 50px 50px;
 	text-align: center;
 	
 }
-h1{
+.tOne{
 	font-family: arial;
-	font-size: 5rem;
+	font-size: 6rem;
 	letter-spacing: 2px;
 	
 }
-h2{
-	margin: 10px 0px;
+.tTwo{
+	margin: 50px 0px;
+	font-size: 3rem;
 }
 @keyframes change{
 	0%{
