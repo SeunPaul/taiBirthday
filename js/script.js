@@ -5,11 +5,11 @@ var birthday = new Date(2020, 4, 9, 0, 0, 0).getTime()
 tick = ()=>{ 
 	var now = new Date().getTime(); 
 	var time = birthday - now; 
-	var days = Math.floor(time / (1000 * 60 * 60 * 24)); 
-	var hours = Math.floor((time %(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
-	var minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)); 
-	var seconds = Math.floor((time % (1000 * 60)) / 1000);
-	timer.innerHTML = days + " days : " + hours + " hours : " + minutes + " minutes : " + seconds + " seconds ";
+	var days = Math.floor(time / (1000 * 60 * 60 * 24)) > 9 ? Math.floor(time / (1000 * 60 * 60 * 24)) : "0"+Math.floor(time / (1000 * 60 * 60 * 24)); 
+	var hours = Math.floor((time %(1000 * 60 * 60 * 24))/(1000 * 60 * 60)) > 9 ? Math.floor((time %(1000 * 60 * 60 * 24))/(1000 * 60 * 60)) : "0"+Math.floor((time %(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+	var minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)) > 9 ? Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)) : "0"+Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)); 
+	var seconds = Math.floor((time % (1000 * 60)) / 1000) > 9 ? Math.floor((time % (1000 * 60)) / 1000) : "0"+Math.floor((time % (1000 * 60)) / 1000);
+	timer.innerHTML = days + "\t:\t" + hours + "\t:\t" + minutes + "\t:\t" + seconds ;
 	    if (time < 0) { 
 	        clearInterval(x); 
 	        timer.innerHTML = "HAPPY BIRTHDAY"; 
@@ -102,3 +102,21 @@ particlesJS('particles-js',
   }
 
 );
+
+
+var swiper = new Swiper('.swiper-container', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 80,
+    stretch: 0,
+    depth: 600,
+    modifier: 1,
+    slideShadows : true,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  },
+});
