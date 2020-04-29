@@ -30,7 +30,6 @@ body{
 	
 }
 .tOne{
-	font-family: arial;
 	font-size: 6rem;
 	letter-spacing: 2px;
 	
@@ -63,7 +62,32 @@ body{
 		background-position: 0 50%;
 	}
 }
-
+.aBirthday{
+	display: none;
+}
+.c{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.button{
+	color: #fff;
+	border: 3px solid #fff;
+	border-radius: 100px;
+	letter-spacing: 10px;
+	font-size: 30px;
+	cursor: pointer;
+	width: 300px;
+	padding: 30px;
+	margin-top: 50px;
+}
+.button:hover{
+	background-color: #fff;
+	color: #23A6D5;
+}
+#explore{
+	display: none;
+}
 #white{
 	text-align: center;
 	background-color: white;
@@ -243,7 +267,7 @@ body{
 	}
 }
 .nFourth{
-	padding: 50px 0px 50px 0px;
+	padding: 50px 0px 200px 0px;
 	background-size: cover;
 
 }

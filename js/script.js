@@ -1,7 +1,11 @@
 var timer = document.querySelector(".timer");
+var before = document.querySelector(".bBirthday");
+var after = document.querySelector(".aBirthday");
+var explore = document.querySelector("#explore");
+var button = document.querySelector(".button");
 
 
-var birthday = new Date(2020, 4, 9, 0, 0, 0).getTime()
+var birthday = new Date(2020, 3, 29, 2, 20, 0).getTime()
 tick = ()=>{ 
 	var now = new Date().getTime(); 
 	var time = birthday - now; 
@@ -10,13 +14,17 @@ tick = ()=>{
 	var minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)) > 9 ? Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)) : "0"+Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)); 
 	var seconds = Math.floor((time % (1000 * 60)) / 1000) > 9 ? Math.floor((time % (1000 * 60)) / 1000) : "0"+Math.floor((time % (1000 * 60)) / 1000);
 	timer.innerHTML = days + "\t:\t" + hours + "\t:\t" + minutes + "\t:\t" + seconds ;
-	    if (time < 0) { 
+	    if ((time/1000) < 1) { 
 	        clearInterval(x); 
-	        timer.innerHTML = "HAPPY BIRTHDAY"; 
+	        before.style.display = "none";
+          after.style.display = "block";
 	    } 
 }
 var x = setInterval(tick, 1000); 
 
+button.onclick = function(){
+  explore.style.display = "block";
+}
 
 
 
