@@ -71,6 +71,7 @@ body{
 	justify-content: center;
 }
 .button{
+	text-decoration: none;
 	color: #fff;
 	border: 3px solid #fff;
 	border-radius: 100px;
@@ -85,9 +86,7 @@ body{
 	background-color: #fff;
 	color: #23A6D5;
 }
-#explore{
-	display: none;
-}
+
 #white{
 	text-align: center;
 	background-color: white;

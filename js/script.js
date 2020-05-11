@@ -1,11 +1,9 @@
 var timer = document.querySelector(".timer");
 var before = document.querySelector(".bBirthday");
 var after = document.querySelector(".aBirthday");
-var explore = document.querySelector("#explore");
-var button = document.querySelector(".button");
 
 
-var birthday = new Date(2020, 3, 29, 2, 20, 0).getTime()
+var birthday = new Date(2020, 4, 11, 1, 32, 0).getTime()
 tick = ()=>{ 
 	var now = new Date().getTime(); 
 	var time = birthday - now; 
@@ -21,10 +19,6 @@ tick = ()=>{
 	    } 
 }
 var x = setInterval(tick, 1000); 
-
-button.onclick = function(){
-  explore.style.display = "block";
-}
 
 
 
@@ -42,21 +36,7 @@ particlesJS('particles-js',
       "color": {
         "value": "#ffffff"
       },
-      "shape": {
-        "type": "",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
+      
       "opacity": {
         "value": 0.5,
         "random": false,
@@ -97,34 +77,7 @@ particlesJS('particles-js',
           "rotateY": 1200
         }
       }
-    },
-    "retina_detect": true,
-    "config_demo": {
-      "hide_card": false,
-      "background_color": "#b61924",
-      "background_image": "",
-      "background_position": "50% 50%",
-      "background_repeat": "no-repeat",
-      "background_size": "cover"
     }
   }
 
 );
-
-
-var swiper = new Swiper('.swiper-container', {
-  effect: 'coverflow',
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: 'auto',
-  coverflowEffect: {
-    rotate: 80,
-    stretch: 0,
-    depth: 600,
-    modifier: 1,
-    slideShadows : true,
-  },
-  pagination: {
-    el: '.swiper-pagination',
-  },
-});
