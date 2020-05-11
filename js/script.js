@@ -3,7 +3,7 @@ var before = document.querySelector(".bBirthday");
 var after = document.querySelector(".aBirthday");
 
 
-var birthday = new Date(2020, 4, 11, 1, 32, 0).getTime()
+var birthday = new Date(2020, 4, 20, 0, 0, 0).getTime()
 tick = ()=>{ 
 	var now = new Date().getTime(); 
 	var time = birthday - now; 
