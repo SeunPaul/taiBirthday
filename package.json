@@ -12,6 +12,6 @@
   "dependencies": {
     "live-server": "^1.2.1",
     "particles.js": "^2.0.0",
-    "swiper": "^5.3.8"
+    "swiper": "^6.5.1"
   }
 }
